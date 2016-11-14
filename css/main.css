@@ -29,8 +29,16 @@ h1 {
     font-size: 2.5em;
 }
 
+section {
+    margin: 2em 0;
+}
+
+footer {
+    margin: 4em 0 1em;
+}
+
 .container {
-    max-width: 800px;
+    max-width: 810px;
     margin: 0 auto;
     padding: 0 15px;
 }
@@ -76,6 +84,17 @@ h1 {
 
 .contact-list a {
     padding: .25em;
+}
+
+.stay-on-target {
+    font-size: .5em;
+    color: #757575;
+    text-decoration: none;
+}
+
+.stay-on-target i {
+    display: inline-block;
+    margin-right: .25em;
 }
 
 @media screen and (min-width: 768px) {
