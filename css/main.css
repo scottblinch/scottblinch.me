@@ -88,8 +88,13 @@ footer {
 
 .stay-on-target {
     font-size: .5em;
-    color: #757575;
+    color: #e0e0e0;
     text-decoration: none;
+}
+
+.stay-on-target:hover,
+.stay-on-target:focus {
+    color: #bdbdbd;
 }
 
 .stay-on-target i {
