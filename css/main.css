@@ -10,6 +10,14 @@ body {
     background-color: #fafafa;
 }
 
+section {
+    margin: 2em 0;
+}
+
+footer {
+    margin: 4em 0 1em;
+}
+
 a {
     color: #0D47A1;
 }
@@ -29,12 +37,8 @@ h1 {
     font-size: 2.5em;
 }
 
-section {
-    margin: 2em 0;
-}
-
-footer {
-    margin: 4em 0 1em;
+abbr[title] {
+    border-bottom: 0;
 }
 
 .container {
