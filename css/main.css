@@ -1,13 +1,13 @@
 html {
-    color: #212121;
-    font-size: 18px;
-    line-height: 1.4;
     font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #212121;
+    line-height: 1.4;
 }
 
 body {
-    background-color: #fafafa;
     text-align: center;
+    background-color: #fafafa;
 }
 
 a {
@@ -66,9 +66,9 @@ footer {
 }
 
 .care-list li + li::before {
-    content: '\00B7';
     display: inline-block;
     margin-right: .5em;
+    content: '\00B7';
 }
 
 .contact-list {
