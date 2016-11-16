@@ -92,13 +92,13 @@ abbr[title] {
 
 .stay-on-target {
     font-size: .5em;
-    color: #e0e0e0;
+    color: #bdbdbd;
     text-decoration: none;
 }
 
 .stay-on-target:hover,
 .stay-on-target:focus {
-    color: #bdbdbd;
+    color: #9e9e9e;
 }
 
 .stay-on-target i {
@@ -115,6 +115,7 @@ abbr[title] {
         text-align: center;
     }
 }
+
 @media screen and (min-width: 1200px) {
     html {
         font-size: 24px;
