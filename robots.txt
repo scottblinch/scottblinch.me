@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://scottblinch.me//sitemap.xml
+Sitemap: https://scottblinch.me/sitemap.xml
