@@ -2,7 +2,7 @@
 <html lang="en-CA">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Scott Blinch - Front end web developer - London, Ontario, Canada</title>
         <meta name="description" content="Scott Blinch is a front end web developer based in London Ontario Canada working with HTML, CSS, JavaScript with an emphasis on accessibility and performance.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +28,7 @@
     </head>
     <body>
         <div class="container" itemscope itemtype="https://schema.org/Person">
-            <header>
+            <header id="header">
                 <h1 itemprop="name">Scott Blinch</h1>
                 <a href="https://scottblinch.me/" itemprop="url" title="Website link">
                     <img class="profile-picture" src="img/scott-blinch.jpg" alt="Photo of Scott Blinch" width="400" height="400" itemprop="image">
@@ -38,43 +38,45 @@
                     I also play guitar in <span itemscope itemprop="memberOf" itemtype="https://schema.org/Organization"><a href="https://betyourlife.ca/" itemprop="url"><span itemprop="name">Bet Your Life</span></a>, a punk rock band also based in <span itemprop="location" itemscope itemtype="https://schema.org/Place"><span itemprop="name">London, Ontario, Canada</span></span></span>.
                 </p>
             </header>
-            <section id="care">
-                <h2>I care about</h2>
-                <ul class="care-list">
-                    <li><abbr title="HyperText Markup Language">HTML</abbr></li>
-                    <li><abbr title="Cascading Stylesheets">CSS</abbr></li>
-                    <li>JavaScript</li>
-                    <li>Accessibility</li>
-                    <li>Performance</li>
-                    <li>WordPress</li>
-                </ul>
-            </section>
-            <section id="contact">
-                <h2>Contact me</h2>
-                <ul class="contact-list">
-                    <li>
-                        <a href="mailto:scott@scottblinch.me" title="Email me" itemprop="email">
-                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://twitter.com/scottblinch" title="Follow me on Twitter">
-                            <i class="fa fa-twitter" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://ca.linkedin.com/in/scottblinch" title="Connect with me on LinkedIn">
-                            <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/scottblinch" title="View my GitHub profile">
-                            <i class="fa fa-github" aria-hidden="true"></i>
-                        </a>
-                    </li>
-                </ul>
-            </section>
-            <footer>
+            <main id="main">
+                <section id="i-care-about">
+                    <h2>I care about</h2>
+                    <ul class="care-list">
+                        <li><abbr title="HyperText Markup Language">HTML</abbr></li>
+                        <li><abbr title="Cascading Stylesheets">CSS</abbr></li>
+                        <li>JavaScript</li>
+                        <li>Accessibility</li>
+                        <li>Performance</li>
+                        <li>WordPress</li>
+                    </ul>
+                </section>
+                <section id="contact-me">
+                    <h2>Contact me</h2>
+                    <ul class="contact-list">
+                        <li>
+                            <a href="mailto:scott@scottblinch.me" title="Email me" itemprop="email">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://twitter.com/scottblinch" title="Follow me on Twitter">
+                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://ca.linkedin.com/in/scottblinch" title="Connect with me on LinkedIn">
+                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/scottblinch" title="View my GitHub profile">
+                                <i class="fa fa-github" aria-hidden="true"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </section>
+            </main>
+            <footer id="footer">
                 <a class="probably-insufferable-star-wars-reference" href="https://www.youtube.com/watch?v=NnP5iDKwuwk">
                     <i class="fa fa-rebel" aria-hidden="true"></i> Stay on target.
                 </a>
