@@ -17,10 +17,14 @@
   },
   "homepage": "https://github.com/scottblinch/scottblinch.me#readme",
   "devDependencies": {
+    "browser-sync": "^2.18.1",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-clean-css": "^2.0.13",
-    "gulp-concat": "^2.6.1"
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.2.0",
+    "gulp-watch": "^4.3.10"
   },
   "dependencies": {
     "font-awesome": "^4.7.0"

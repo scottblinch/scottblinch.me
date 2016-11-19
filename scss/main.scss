@@ -1,0 +1,128 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #212121;
+    line-height: 1.4;
+
+    @media screen and (min-width: 768px) {
+        font-size: 21px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        font-size: 24px;
+    }
+}
+
+body {
+    text-align: center;
+    background-color: #fafafa;
+}
+
+section {
+    margin: 2em 0;
+}
+
+footer {
+    margin: 4em 0 1em;
+}
+
+a {
+    color: #0D47A1;
+
+    &:hover,
+    &:focus {
+        color: #b71c1c;
+        text-decoration: none;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+abbr[title] {
+    border-bottom: 0;
+}
+
+.container {
+    max-width: 810px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.profile-picture {
+    border-radius: 50%;
+}
+
+.description {
+    text-align: left;
+
+    @media screen and (min-width: 768px) {
+        text-align: center;
+    }
+}
+
+.care-list {
+    padding: 0;
+    list-style: none;
+
+    li {
+        display: inline-block;
+        line-height: 2;
+        vertical-align: middle;
+
+        &::before {
+            position: relative;
+            top: -.2em;
+            display: inline-block;
+            margin-right: 1em;
+            font-family: FontAwesome;
+            font-size: .66em;
+            text-rendering: auto;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            vertical-align: middle;
+            content: '\f00c';
+        }
+
+        & + li {
+            margin-left: 1em;
+        }
+    }
+}
+
+.contact-list {
+    padding: 0;
+    font-size: 1.5em;
+    list-style: none;
+
+    li {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    a {
+        padding: .25em;
+    }
+}
+
+.stay-on-target {
+    font-size: .5em;
+    color: #bdbdbd;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: #9e9e9e;
+    }
+
+    i {
+        display: inline-block;
+        margin-right: .25em;
+    }
+}
