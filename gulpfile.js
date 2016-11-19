@@ -5,13 +5,16 @@ var gulp = require('gulp'),
     cleanCSS = require('gulp-clean-css'),
     autoprefixer = require('gulp-autoprefixer'),
     watch = require('gulp-watch'),
-    browserSync = require('browser-sync').create();
+    uglify = require('gulp-uglify'),
+    pump = require('pump'),
+    browserSync = require('browser-sync').create(),
+    cacheBust = require('gulp-cache-bust');
 
-gulp.task('default', ['browser-sync', 'minify'], function() {
+gulp.task('default', ['browser-sync', 'minify-css', 'minify-js'], function() {
     gulp.watch('scss/**/*.scss', ['sass']);
-    gulp.watch('css/**/*.css', ['minify']);
+    gulp.watch('css/**/*.css', ['minify-css', 'cache-bust']);
+    gulp.watch('js/**/*.js', ['minify-js', 'cache-bust', browserSync.reload]);
     gulp.watch('**/*.html', browserSync.reload);
-    gulp.watch('js/**/*.js', browserSync.reload);
 });
 
 gulp.task('browser-sync', function() {
@@ -30,7 +33,7 @@ gulp.task('sass', function(){
         .pipe(gulp.dest('css'));
 });
 
-gulp.task('minify', function() {
+gulp.task('minify-css', function() {
     return gulp.src([
             'css/normalize.min.css',
             'css/font-awesome.min.css',
@@ -49,4 +52,21 @@ gulp.task('minify', function() {
         .pipe(browserSync.reload({
             stream: true
         }));
+});
+
+gulp.task('minify-js', function (cb) {
+    pump([
+            gulp.src('js/main.js'),
+            uglify(),
+            concat('main.min.js'),
+            gulp.dest('js'),
+        ],
+        cb
+    );
+});
+
+gulp.task('cache-bust', function () {
+    return gulp.src('index.html')
+        .pipe(cacheBust())
+        .pipe(gulp.dest('.'));
 });
