@@ -1,13 +1,12 @@
 <!doctype html>
-<html lang="en-CA">
+<html amp lang="en-CA">
     <head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Scott Blinch - Front end web developer - London, Ontario, Canada</title>
         <meta name="description" content="Scott Blinch is a front end web developer based in London Ontario Canada working with HTML, CSS, JavaScript with an emphasis on accessibility and performance.">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1">
+        <link rel="canonical" href="https://scottblinch.me/">
 
-        <link rel="amphtml" href="amp.html">
 
         <meta property="og:title" content="Scott Blinch - Front end web developer - London, Ontario, Canada">
         <meta property="og:url" content="https://scottblinch.me/">
@@ -26,14 +25,121 @@
         <!-- TODO: favicons -->
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-        <link rel="stylesheet" href="css/style.min.css?v=ae93b511138c63fdf8ca99f88ba77be2">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+        <style amp-custom>
+            html {
+                font-family: 'Roboto', sans-serif;
+                font-size: 18px;
+                color: #212121;
+                line-height: 1.4;
+            }
+
+            body {
+                text-align: center;
+                background-color: #fafafa;
+            }
+
+            section {
+                margin: 2em 0;
+            }
+
+            footer {
+                margin: 4em 0 1em;
+            }
+
+            a {
+                color: #0d47a1;
+            }
+
+            a:hover,
+            a:focus {
+                color: #b71c1c;
+                text-decoration: none;
+            }
+
+            img {
+                max-width: 100%;
+                height: auto;
+            }
+
+            h1 {
+                font-size: 2.5em;
+            }
+
+            abbr[title] {
+                border-bottom: 0;
+            }
+
+            .container {
+                max-width: 880px;
+                margin: 0 auto;
+                padding: 0 15px;
+            }
+
+            .profile-picture {
+                border-radius: 50%;
+            }
+
+            .description {
+                text-align: left;
+            }
+
+            .contact-list {
+                padding: 0;
+                font-size: 1.5em;
+                list-style: none;
+            }
+
+            .contact-list li {
+                display: inline-block;
+                vertical-align: middle;
+            }
+
+            .contact-list a {
+                padding: .25em;
+            }
+
+            .probably-insufferable-star-wars-reference {
+                font-size: .5em;
+                color: #bdbdbd;
+                text-decoration: none;
+            }
+
+            .probably-insufferable-star-wars-reference:hover,
+            .probably-insufferable-star-wars-reference:focus {
+                color: #9e9e9e;
+            }
+
+            .probably-insufferable-star-wars-reference i {
+                display: inline-block;
+                margin-right: .25em;
+            }
+
+            @media screen and (min-width: 768px) {
+                html {
+                    font-size: 21px;
+                }
+
+                .description {
+                    text-align: center;
+                }
+            }
+
+            @media screen and (min-width: 1200px) {
+                html {
+                    font-size: 24px;
+                }
+            }
+        </style>
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
     </head>
     <body>
         <div class="container" itemscope itemtype="https://schema.org/Person">
             <header id="header">
                 <h1 itemprop="name">Scott Blinch</h1>
-                <a href="https://scottblinch.me/" itemprop="url" title="Website link">
-                    <img class="profile-picture" src="img/scott-blinch.jpg" alt="Photo of Scott Blinch" width="400" height="400" itemprop="image">
+                <a href="https://scottblinch.me/" itemprop="url" title="Website link" target="_blank">
+                    <amp-img class="profile-picture" src="img/scott-blinch.jpg" alt="Photo of Scott Blinch" width="400" height="400" itemprop="image"></amp-img>
                 </a>
                 <div class="description" itemprop="description">
                     <p>
@@ -57,17 +163,18 @@
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/scottblinch" title="Follow me on Twitter">
+                            <a href="https://twitter.com/scottblinch" title="Follow me on Twitter" target="_blank">
                                 <i class="fa fa-twitter" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://ca.linkedin.com/in/scottblinch" title="Connect with me on LinkedIn">
+                            <a href="https://ca.linkedin.com/in/scottblinch" title="Connect with me on LinkedIn"
+                               target="_blank">
                                 <i class="fa fa-linkedin" aria-hidden="true"></i>
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/scottblinch" title="View my GitHub profile">
+                            <a href="https://github.com/scottblinch" title="View my GitHub profile" target="_blank">
                                 <i class="fa fa-github" aria-hidden="true"></i>
                             </a>
                         </li>
@@ -80,15 +187,5 @@
                 </a>
             </footer>
         </div>
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-            ga('create', 'UA-87713362-1', 'auto');
-            ga('send', 'pageview');
-
-        </script>
     </body>
 </html>
