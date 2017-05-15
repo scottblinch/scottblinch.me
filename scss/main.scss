@@ -67,35 +67,6 @@ abbr[title] {
     }
 }
 
-.care-list {
-    padding: 0;
-    list-style: none;
-
-    li {
-        display: inline-block;
-        line-height: 2;
-        vertical-align: middle;
-
-        &::before {
-            position: relative;
-            top: -.2em;
-            display: inline-block;
-            margin-right: 1em;
-            font-family: FontAwesome;
-            font-size: .66em;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-            vertical-align: middle;
-            content: '\f00c';
-        }
-
-        & + li {
-            margin-left: 1em;
-        }
-    }
-}
-
 .contact-list {
     padding: 0;
     font-size: 1.5em;
