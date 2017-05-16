@@ -27,7 +27,7 @@ footer {
 }
 
 a {
-    color: #0D47A1;
+    color: #0d47a1;
 
     &:hover,
     &:focus {
@@ -60,11 +60,7 @@ abbr[title] {
 }
 
 .description {
-    text-align: left;
-
-    @media screen and (min-width: 768px) {
-        text-align: center;
-    }
+    text-align: justify;
 }
 
 .contact-list {
@@ -84,12 +80,12 @@ abbr[title] {
 
 .probably-insufferable-star-wars-reference {
     font-size: .5em;
-    color: #bdbdbd;
+    color: #424242;
     text-decoration: none;
 
     &:hover,
     &:focus {
-        color: #9e9e9e;
+        color: #212121;
     }
 
     i {
