@@ -1,5 +1,9 @@
 {
-    "name": "Scott Blinch",
+    "lang": "en",
+    "dir": "ltr",
+    "name": "Scott Blinch - Front end web developer - London, Ontario, Canada",
+    "description": "Scott Blinch's personal website.",
+    "short_name": "Scott Blinch",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
@@ -14,5 +18,13 @@
     ],
     "theme_color": "#ffffff",
     "background_color": "#ffffff",
-    "display": "standalone"
+    "display": "standalone",
+    "start_url": "/?utm_source=homescreen",
+    "scope": "/",
+    "orientation": "portrait",
+    "serviceworker": {
+        "src": "service-worker.js",
+        "scope": "/",
+        "use_cache": "true"
+    }
 }
