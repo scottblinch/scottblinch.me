@@ -8,7 +8,9 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     pump = require('pump'),
     browserSync = require('browser-sync').create(),
-    cacheBust = require('gulp-cache-bust');
+    cacheBust = require('gulp-cache-bust'),
+    imagemin = require('gulp-imagemin');
+
 
 gulp.task('default', ['browser-sync', 'minify-css', 'minify-js'], function() {
     gulp.watch('scss/**/*.scss', ['sass']);
@@ -69,4 +71,21 @@ gulp.task('cache-bust', function () {
     return gulp.src('index.html')
         .pipe(cacheBust())
         .pipe(gulp.dest('.'));
+});
+
+gulp.task('images', function () {
+   gulp.src('img/*')
+       .pipe(imagemin([
+           imagemin.gifsicle({
+               interlaced: true,
+               optimizationLevel: 3,
+           }),
+           imagemin.jpegtran({
+               progressive: true,
+               arithmetric: true,
+           }),
+           imagemin.optipng({optimizationLevel: 7}),
+           imagemin.svgo({plugins: [{removeViewBox: true}]})
+       ]))
+       .pipe(gulp.dest('img/dist'));
 });
