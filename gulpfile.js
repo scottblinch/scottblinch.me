@@ -74,7 +74,7 @@ gulp.task('cache-bust', function () {
 });
 
 gulp.task('images', function () {
-   gulp.src('img/*')
+   gulp.src(['img/*', '!img/dist/*'])
        .pipe(imagemin([
            imagemin.gifsicle({
                interlaced: true,
