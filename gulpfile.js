@@ -80,10 +80,7 @@ gulp.task('images', function () {
                interlaced: true,
                optimizationLevel: 3,
            }),
-           imagemin.jpegtran({
-               progressive: true,
-               arithmetic: true,
-           }),
+           imagemin.jpegtran({progressive: true}),
            imagemin.optipng({optimizationLevel: 7}),
            imagemin.svgo({plugins: [{removeViewBox: true}]})
        ]))
