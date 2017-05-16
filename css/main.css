@@ -55,7 +55,8 @@ abbr[title] {
     display: inline-block;
     vertical-align: middle; }
   .contact-list a {
-    padding: .25em; }
+    padding: .25em;
+    text-decoration: none; }
 
 .probably-insufferable-star-wars-reference {
   font-size: .5em;
