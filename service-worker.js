@@ -1,6 +1,7 @@
-var CACHE_NAME = 'scottblinch.com-v1';
+var CACHE_NAME = 'scottblinch.com-v2';
 var urlsToCache = [
     '/',
+    '/resume.html',
     '/img/dist/scott-blinch.jpg',
     '/css/style.min.css',
     '/js/main.min.js'

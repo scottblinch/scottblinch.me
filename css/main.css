@@ -68,4 +68,82 @@ abbr[title] {
     display: inline-block;
     margin-right: .25em; }
 
+summary::-webkit-details-marker {
+  display: none; }
+
+.resume {
+  font-size: 14px; }
+  @media (min-width: 992px) {
+    .resume {
+      font-size: 16px; } }
+
+.resume-body {
+  text-align: left; }
+  @media only screen and (min-width: 992px) {
+    .resume-body {
+      background-color: #eee; } }
+
+.resume-page {
+  position: relative;
+  padding: 2em; }
+  @media only screen and (min-width: 992px) {
+    .resume-page {
+      margin: 2em auto;
+      background: #fff;
+      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+      width: 21.59cm;
+      max-width: 100%;
+      min-height: 29.94cm;
+      padding: 2cm; } }
+
+.resume-header {
+  text-align: right; }
+
+.resume-name {
+  margin-top: 0;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: .5em;
+  margin-bottom: .5em; }
+
+.resume-contact {
+  list-style: none; }
+
+.resume-section {
+  padding-left: 4em; }
+  @media (min-width: 992px) {
+    .resume-section {
+      padding-left: 8em; } }
+  .resume-section time {
+    position: relative;
+    top: .25em;
+    float: left;
+    display: inline-block;
+    width: 3.5rem;
+    margin-left: -4rem;
+    font-size: .7em;
+    text-align: right; }
+    @media (min-width: 992px) {
+      .resume-section time {
+        width: 7rem;
+        margin-left: -8rem; } }
+
+.resume-section-heading {
+  position: relative; }
+  .resume-section-heading::before {
+    position: absolute;
+    top: 50%;
+    right: calc(100% + 1rem);
+    display: inline-block;
+    width: 3.5rem;
+    height: .5rem;
+    margin-top: -.25rem;
+    background-color: #b71c1c;
+    content: ''; }
+    @media (min-width: 992px) {
+      .resume-section-heading::before {
+        width: 7rem; } }
+
+.skills ul {
+  padding-left: 1.5em; }
+
 /*# sourceMappingURL=../maps/main.css.map */
