@@ -113,16 +113,17 @@ summary::-webkit-details-marker {
 .resume-body {
     text-align: left;
 
-    @media only screen and (min-width: 992px) {
+    @media screen and (min-width: 992px) {
         background-color: #eee;
     }
 }
 
 .resume-page {
+.resume-page {
     position: relative;
     padding: 2em;
 
-    @media only screen and (min-width: 992px) {
+    @media screen and (min-width: 992px) {
         margin: 2em auto;
         background: #fff;
         box-shadow: 0 4px 5px rgba(0,0,0,.2);
@@ -130,6 +131,10 @@ summary::-webkit-details-marker {
         max-width: 100%;
         min-height: 29.94cm;
         padding: 2cm;
+    }
+
+    @media print {
+        padding: 0;
     }
 }
 
@@ -151,8 +156,12 @@ summary::-webkit-details-marker {
 .resume-section {
     padding-left: 4em;
 
-    @media (min-width: 992px) {
+    @media (min-width: 768px), print {
         padding-left: 8em;
+    }
+
+    &:last-of-type {
+        margin-bottom: 0;
     }
 
     time {
@@ -165,7 +174,7 @@ summary::-webkit-details-marker {
         font-size: .7em;
         text-align: right;
 
-        @media (min-width: 992px) {
+        @media (min-width: 768px), print {
             width: 7rem;
             margin-left: -8rem;
         }
@@ -181,13 +190,23 @@ summary::-webkit-details-marker {
         right: calc(100% + 1rem);
         display: inline-block;
         width: 3.5rem;
-        height: .5rem;
+        border-top: 5px solid $secondary;
         margin-top: -.25rem;
-        background-color: $secondary;
         content: '';
 
-        @media (min-width: 992px) {
+        @media (min-width: 768px), print {
             width: 7rem;
+        }
+    }
+}
+
+summary {
+    a,
+    .print-bold {
+         @media print {
+        color: inherit;
+        font-weight: 600;
+        text-decoration: none;
         }
     }
 }
@@ -195,5 +214,6 @@ summary::-webkit-details-marker {
 .skills {
     ul {
         padding-left: 1.5em;
+        margin-bottom: 0;
     }
 }

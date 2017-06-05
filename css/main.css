@@ -95,6 +95,9 @@ summary::-webkit-details-marker {
       max-width: 100%;
       min-height: 29.94cm;
       padding: 2cm; } }
+  @media print {
+    .resume-page {
+      padding: 0; } }
 
 .resume-header {
   text-align: right; }
@@ -110,9 +113,11 @@ summary::-webkit-details-marker {
 
 .resume-section {
   padding-left: 4em; }
-  @media (min-width: 992px) {
+  @media (min-width: 768px), print {
     .resume-section {
       padding-left: 8em; } }
+  .resume-section:last-of-type {
+    margin-bottom: 0; }
   .resume-section time {
     position: relative;
     top: .25em;
@@ -122,7 +127,7 @@ summary::-webkit-details-marker {
     margin-left: -4rem;
     font-size: .7em;
     text-align: right; }
-    @media (min-width: 992px) {
+    @media (min-width: 768px), print {
       .resume-section time {
         width: 7rem;
         margin-left: -8rem; } }
@@ -135,15 +140,22 @@ summary::-webkit-details-marker {
     right: calc(100% + 1rem);
     display: inline-block;
     width: 3.5rem;
-    height: .5rem;
+    border-top: 5px solid #b71c1c;
     margin-top: -.25rem;
-    background-color: #b71c1c;
     content: ''; }
-    @media (min-width: 992px) {
+    @media (min-width: 768px), print {
       .resume-section-heading::before {
         width: 7rem; } }
 
+@media print {
+  summary a,
+  summary .print-bold {
+    color: inherit;
+    font-weight: 600;
+    text-decoration: none; } }
+
 .skills ul {
-  padding-left: 1.5em; }
+  padding-left: 1.5em;
+  margin-bottom: 0; }
 
 /*# sourceMappingURL=../maps/main.css.map */
