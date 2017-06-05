@@ -1,7 +1,7 @@
-function loadServiceWorker() {
-    navigator.serviceWorker.register('service-worker.js');
-}
+'use strict';
 
 if ('serviceWorker' in navigator) {
-    window.addEventListener('load', loadServiceWorker);
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('service-worker.js');
+    });
 }
