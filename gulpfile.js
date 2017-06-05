@@ -9,7 +9,9 @@ var gulp = require('gulp'),
     pump = require('pump'),
     browserSync = require('browser-sync').create(),
     cacheBust = require('gulp-cache-bust'),
-    imagemin = require('gulp-imagemin');
+    imagemin = require('gulp-imagemin'),
+    path = require('path'),
+    swPrecache = require('sw-precache');
 
 
 gulp.task('default', ['browser-sync', 'minify-css', 'minify-js'], function() {
@@ -85,4 +87,20 @@ gulp.task('images', function () {
            imagemin.svgo({plugins: [{removeViewBox: true}]})
        ]))
        .pipe(gulp.dest('img/dist'));
+});
+
+gulp.task('sw', function(callback) {
+    var rootDir = './';
+
+    swPrecache.write(`${rootDir}/service-worker.js`, {
+        staticFileGlobs: [
+            rootDir + '**.html',
+            rootDir + 'css/**.css',
+            rootDir + 'fonts/**.*',
+            rootDir + 'img/**.*',
+            rootDir + 'js/**.js'
+        ],
+        stripPrefix: rootDir,
+        minify: true
+    }, callback);
 });

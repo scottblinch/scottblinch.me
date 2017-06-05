@@ -28,7 +28,8 @@
     "gulp-sourcemaps": "^2.2.0",
     "gulp-uglify": "^2.0.0",
     "gulp-watch": "^4.3.10",
-    "pump": "^1.0.1"
+    "pump": "^1.0.1",
+    "sw-precache": "^5.1.1"
   },
   "dependencies": {
     "font-awesome": "^4.7.0"
