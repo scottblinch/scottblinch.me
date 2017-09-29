@@ -1,12 +1,8 @@
 html {
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
-  color: #212121;
-  line-height: 1.4; }
-  @media screen and (min-width: 768px) {
-    html {
-      font-size: 21px; } }
-  @media screen and (min-width: 1200px) {
+  font-size: calc(18px + (24 - 18) * (100vw - 320px) / (1200 - 320));
+  color: #212121; }
+  @media (min-width: 1200px) {
     html {
       font-size: 24px; } }
 
@@ -25,13 +21,46 @@ a {
   a:hover, a:focus {
     color: #b71c1c;
     text-decoration: none; }
+  @media print {
+    a:not([href^="https://scottblinch.me"])::after {
+      content: " (" attr(href) ")"; } }
 
 img {
   max-width: 100%;
   height: auto; }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 2em;
+  line-height: 1;
+  text-align: center; }
+
 h1 {
-  font-size: 2.5em; }
+  margin-top: 1em;
+  font-size: 2em; }
+
+h2 {
+  font-size: 1.5em; }
+
+h3 {
+  font-size: 1.266em; }
+
+h4 {
+  font-size: 1.125em; }
+
+h5 {
+  font-size: 1em; }
+
+h6 {
+  font-size: .875em; }
+
+p {
+  line-height: 1.5;
+  max-width: 65ch; }
 
 abbr[title] {
   border-bottom: 0; }
@@ -45,7 +74,7 @@ abbr[title] {
   border-radius: 50%; }
 
 .description {
-  text-align: justify; }
+  text-align: left; }
 
 .contact-list {
   padding: 0;
@@ -57,6 +86,10 @@ abbr[title] {
   .contact-list a {
     padding: .25em;
     text-decoration: none; }
+
+@media print {
+  .footer {
+    display: none; } }
 
 .probably-insufferable-star-wars-reference {
   font-size: .5em;
@@ -79,14 +112,14 @@ summary::-webkit-details-marker {
 
 .resume-body {
   text-align: left; }
-  @media only screen and (min-width: 992px) {
+  @media screen and (min-width: 992px) {
     .resume-body {
       background-color: #eee; } }
 
 .resume-page {
   position: relative;
   padding: 2em; }
-  @media only screen and (min-width: 992px) {
+  @media screen and (min-width: 992px) {
     .resume-page {
       margin: 2em auto;
       background: #fff;
