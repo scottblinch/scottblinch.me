@@ -36,9 +36,8 @@
         <style amp-custom>
             html {
                 font-family: 'Roboto', sans-serif;
-                font-size: 18px;
+                font-size: calc(18px + (24 - 18) * (100vw - 320px) / (1200 - 320));
                 color: #212121;
-                line-height: 1.4;
             }
 
             body {
@@ -69,8 +68,45 @@
                 height: auto;
             }
 
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                margin-top: 2em;
+                line-height: 1;
+                text-align: center;
+            }
+
             h1 {
-                font-size: 2.5em;
+                margin-top: 1em;
+                font-size: 2em;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            h3 {
+                font-size: 1.266em;
+            }
+
+            h4 {
+                font-size: 1.125em;
+            }
+
+            h5 {
+                font-size: 1em;
+            }
+
+            h6 {
+                font-size: .875em;
+            }
+
+            p {
+                line-height: 1.5;
+                max-width: 65ch;
             }
 
             abbr[title] {
@@ -90,7 +126,7 @@
             }
 
             .description {
-                text-align: justify;
+                text-align: left;
             }
 
             .contact-list {
@@ -125,15 +161,19 @@
                 margin-right: .25em;
             }
 
-            @media screen and (min-width: 768px) {
-                html {
-                    font-size: 21px;
-                }
-            }
-
             @media screen and (min-width: 1200px) {
                 html {
                     font-size: 24px;
+                }
+            }
+
+            @media print {
+                a:not([href^="https://scottblinch.me"])::after {
+                    content: " (" attr(href) ")";
+                }
+
+                .footer {
+                    display: none;
                 }
             }
         </style>
@@ -149,7 +189,10 @@
                     <amp-img class="profile-picture" src="img/scott-blinch.jpg" alt="Photo of Scott Blinch" width="400"
                              height="400" itemprop="image" layout="responsive"></amp-img>
                 </a>
-                <div class="description" itemprop="description">
+            </header>
+            <main id="main">
+                <div section="about-me" class="description" itemprop="description">
+                    <h2>About me</h2>
                     <p>
                         I'm a front end web developer based in <span itemprop="workLocation" itemscope itemtype="https://schema.org/Place"><span itemprop="name">London, Ontario, Canada</span></span>. I mainly code in HTML, CSS, and JS (in addition to PHP, SQL, etc) to create fast, efficient, and accessible websites and web apps.
                     </p>
@@ -160,8 +203,6 @@
                         I also play guitar in <span itemscope itemprop="memberOf" itemtype="https://schema.org/Organization"><a href="https://betyourlife.ca/" itemprop="url"><span itemprop="name">Bet Your Life</span></a>, a punk rock band also based in <span itemprop="location" itemscope itemtype="https://schema.org/Place"><span itemprop="name">London, Ontario, Canada</span></span></span>.
                     </p>
                 </div>
-            </header>
-            <main id="main">
                 <section id="contact-me">
                     <h2>Contact me</h2>
                     <ul class="contact-list">
@@ -194,7 +235,7 @@
                     </ul>
                 </section>
             </main>
-            <footer id="footer">
+            <footer class="footer" id="footer">
                 <a class="probably-insufferable-star-wars-reference" href="https://www.youtube.com/watch?v=NnP5iDKwuwk">
                     <i class="fa fa-rebel" aria-hidden="true"></i> Stay on target.
                 </a>
