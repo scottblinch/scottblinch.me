@@ -1,5 +1,5 @@
 html {
-    font-family: 'Roboto', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     font-size: calc(18px + (24 - 18) * (100vw - 320px) / (1200 - 320));
     color: #212121;
     box-sizing: border-box;
@@ -130,7 +130,7 @@ p {
 }
 
 .probably-insufferable-star-wars-reference {
-    font-size: .5em;
+    font-size: 14px;
     color: #424242;
     text-decoration: none;
 
