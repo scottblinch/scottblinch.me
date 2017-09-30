@@ -123,6 +123,12 @@ summary::-webkit-details-marker {
   @media (min-width: 992px) {
     .resume {
       font-size: 16px; } }
+  .resume h2,
+  .resume h3,
+  .resume h4,
+  .resume h5,
+  .resume h6 {
+    text-align: left; }
 
 .resume-body {
   text-align: left; }

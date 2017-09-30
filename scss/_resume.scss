@@ -8,6 +8,14 @@ summary::-webkit-details-marker {
     @media (min-width: 992px) {
         font-size: 16px;
     }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        text-align: left;
+    }
 }
 
 .resume-body {
