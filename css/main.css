@@ -1,20 +1,21 @@
 html {
   font-family: 'Roboto', sans-serif;
   font-size: calc(18px + (24 - 18) * (100vw - 320px) / (1200 - 320));
-  color: #212121; }
+  color: #212121;
+  box-sizing: border-box; }
   @media (min-width: 1200px) {
     html {
       font-size: 24px; } }
 
+*,
+::before,
+::after {
+  box-sizing: inherit; }
+
 body {
+  padding: 2em 0 1em;
   text-align: center;
   background-color: #fafafa; }
-
-section {
-  margin: 2em 0; }
-
-footer {
-  margin: 4em 0 1em; }
 
 a {
   color: #0d47a1; }
@@ -35,22 +36,22 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 2em;
+  margin-top: 3em;
   line-height: 1;
   text-align: center; }
 
 h1 {
-  margin-top: 1em;
-  font-size: 2em; }
+  margin-top: 0;
+  font-size: 2.074em; }
 
 h2 {
-  font-size: 1.5em; }
+  font-size: 1.728em; }
 
 h3 {
-  font-size: 1.266em; }
+  font-size: 1.44em; }
 
 h4 {
-  font-size: 1.125em; }
+  font-size: 1.2em; }
 
 h5 {
   font-size: 1em; }
@@ -59,16 +60,17 @@ h6 {
   font-size: .875em; }
 
 p {
+  margin-bottom: 2em;
   line-height: 1.5;
-  max-width: 65ch; }
-
-abbr[title] {
-  border-bottom: 0; }
+  max-width: 66ch; }
 
 .container {
-  max-width: 880px;
+  max-width: 39em;
   margin: 0 auto;
-  padding: 0 15px; }
+  padding: 0 1em; }
+
+.profile-picture-link {
+  display: inline-block; }
 
 .profile-picture {
   border-radius: 50%; }
@@ -84,8 +86,11 @@ abbr[title] {
     display: inline-block;
     vertical-align: middle; }
   .contact-list a {
+    display: inline-block;
     padding: .25em;
     text-decoration: none; }
+  .contact-list i {
+    display: inline-block; }
 
 @media print {
   .footer {
