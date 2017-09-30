@@ -128,7 +128,13 @@ summary::-webkit-details-marker {
   .resume h4,
   .resume h5,
   .resume h6 {
+    margin-top: 1em;
     text-align: left; }
+  .resume h2 {
+    font-size: 1.5em; }
+  .resume p {
+    margin-bottom: 1em;
+    line-height: 1.4; }
 
 .resume-body {
   text-align: left; }
@@ -163,6 +169,14 @@ summary::-webkit-details-marker {
 
 .resume-contact {
   list-style: none; }
+  .resume-contact a::after {
+    display: none; }
+
+.resume-contact-phone {
+  display: none; }
+  @media print {
+    .resume-contact-phone {
+      display: block; } }
 
 .resume-section {
   padding-left: 4em; }
