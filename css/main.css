@@ -81,20 +81,29 @@ p {
 .contact-list {
   padding: 0;
   font-size: 1.5em;
-  list-style: none; }
+  line-height: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
   .contact-list li {
     display: inline-block;
+    padding: 0 .25em;
+    line-height: 0;
     vertical-align: middle; }
   .contact-list a {
     display: inline-block;
     padding: .25em;
+    line-height: 0;
     text-decoration: none; }
   .contact-list i {
     display: inline-block; }
 
-@media print {
-  .footer {
-    display: none; } }
+.footer {
+  margin-top: 3em; }
+  @media print {
+    .footer {
+      display: none; } }
 
 .probably-insufferable-star-wars-reference {
   font-size: 14px;
