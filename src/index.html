@@ -1,0 +1,93 @@
+<!doctype html>
+<html class="no-js" lang="{{ locale }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ seoDescription }}">
+    <meta name="author" content="{{ name }}">
+
+    <!-- <link rel="amphtml" href="amp.html"> -->
+
+    <meta property="og:title" content="{{ title }}">
+    <meta property="og:url" content="{{ url }}">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="{{ seoDescription }}">
+    <meta property="og:image" content="{{ url }}/scott-blinch.jpg">
+    <meta property="og:locale" content="{{ locale.replace('-', '_') }}">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="{{ twitter }}">
+    <meta name="twitter:title" content="{{ title }}">
+    <meta name="twitter:description" content="{{ seoDescription }}">
+    <meta name="twitter:image" content="{{ url }}/scott-blinch.jpg">
+    <meta name="twitter:image:alt" content="Photo of {{ name }}">
+
+
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#0d47a1">
+    <meta name="apple-mobile-web-app-title" content="Scott Blinch">
+    <meta name="application-name" content="Scott Blinch">
+    <meta name="theme-color" content="#ffffff"> -->
+
+    <link rel="stylesheet" href="./index.pcss">
+  </head>
+  <body class="py-8 bg-gray-100">
+    <div class="container">
+      <header id="header" class="text-center">
+        <h1 class="mt-0">{{ name }}</h1>
+        <a class="inline-block rounded-full overflow-hidden" href="{{ url }}" title="Website link">
+          <img src="./scott-blinch.jpg"
+               alt="Photo of {{ name }}"
+               width="400"
+               height="400">
+        </a>
+      </header>
+      <main id="main">
+        <section id="about-me" class="description">
+          <h2 class="text-center">About me</h2>
+          <p>
+            I'm a front end web developer based in {{ location }}. As most front end developers
+            do, I mainly code in HTML, CSS, and JavaScript. For the sake of jamming in a few more
+            keywords for that extra delicious SEO, we can expand on that a little to include
+            related technologies. How about a nested list? That's a good trick.
+          </p>
+          <ul class="list-disc">
+            <li>
+              HTML
+              <ul>
+                <li>HTML5 (is this even worth saying anymore? Who still uses XHTML?)</li>
+                <li>Templating languages like Twig, Pug, and Jade</li>
+                <li>
+                  Semantics -- This isn't a related technlogy but I felt the need to include this
+                  here as I have the very strong opinion that a deep understanding of proper
+                  structure of HTML is instrumental in building a fully usable and accessible
+                  web application.
+                </li>
+                <li>PostHTML</li>
+              </ul>
+            </li>
+            <li>
+              CSS
+              <ul>
+                <li>SCSS</li>
+                <li>
+                  Less -- I actually think I enjoy Less a little more than I do SCSS, but ever
+                  since Bootstrap switched over to SCSS I've used Less, well, less. I mostly added
+                  this description in for the bad pun, even though it is true.
+                </li>
+                <li>PostCSS</li>
+                <li></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+    </div>
+    <script src="./index.js"></script>
+  </body>
+</html>

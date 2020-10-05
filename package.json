@@ -1,19 +1,29 @@
 {
   "name": "scottblinch.me",
-  "version": "2.0.0",
-  "description": "My personal website.",
-  "main": "index.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
   "scripts": {
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/scottblinch/scottblinch.me.git"
   },
-  "author": "Scott Blinch",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/scottblinch/scottblinch.me/issues"
   },
-  "homepage": "https://github.com/scottblinch/scottblinch.me#readme"
+  "homepage": "https://github.com/scottblinch/scottblinch.me#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "postcss": "^8.1.1",
+    "postcss-modules": "^3.2.2",
+    "posthtml-expressions": "^1.5.0",
+    "tailwindcss": "^1.8.10"
+  }
 }
