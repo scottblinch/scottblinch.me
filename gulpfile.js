@@ -1,35 +1,26 @@
-var gulp = require('gulp'),
-    sourcemaps = require('gulp-sourcemaps'),
-    sass = require('gulp-sass'),
-    concat = require('gulp-concat'),
-    cleanCSS = require('gulp-clean-css'),
-    autoprefixer = require('gulp-autoprefixer'),
-    watch = require('gulp-watch'),
-    uglify = require('gulp-uglify'),
-    pump = require('pump'),
-    browserSync = require('browser-sync').create(),
-    cacheBust = require('gulp-cache-bust'),
-    imagemin = require('gulp-imagemin'),
-    path = require('path'),
-    swPrecache = require('sw-precache');
+const gulp = require('gulp');
+const sourcemaps = require('gulp-sourcemaps');
+const sass = require('gulp-sass');
+const concat = require('gulp-concat');
+const cleanCSS = require('gulp-clean-css');
+const autoprefixer = require('gulp-autoprefixer');
+const uglify = require('gulp-uglify');
+const pump = require('pump');
+const browserSync = require('browser-sync').create();
+const cacheBust = require('gulp-cache-bust');
+const imagemin = require('gulp-imagemin');
+const path = require('path');
+const swPrecache = require('sw-precache');
 
-
-gulp.task('default', ['browser-sync', 'minify-css', 'minify-js'], function() {
-    gulp.watch('scss/**/*.scss', ['sass']);
-    gulp.watch('css/**/*.css', ['minify-css', 'cache-bust']);
-    gulp.watch('js/**/*.js', ['minify-js', 'cache-bust', browserSync.reload]);
-    gulp.watch('**/*.html', browserSync.reload);
-});
-
-gulp.task('browser-sync', function() {
+gulp.task('browser-sync', function () {
     browserSync.init({
         server: {
-            baseDir: './'
+            baseDir: './',
         },
-    })
+    });
 });
 
-gulp.task('sass', function(){
+gulp.task('sass', function () {
     return gulp.src('scss/**/*.scss')
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
@@ -37,36 +28,34 @@ gulp.task('sass', function(){
         .pipe(gulp.dest('css'));
 });
 
-gulp.task('minify-css', function() {
+gulp.task('minify-css', function () {
     return gulp.src([
-            'css/normalize.min.css',
-            'css/font-awesome.min.css',
-            'css/main.css'
-        ])
+        'css/normalize.min.css',
+        'css/font-awesome.min.css',
+        'css/main.css',
+    ])
         .pipe(cleanCSS({
             compatibility: '*',
             keepSpecialComments: '0',
         }))
         .pipe(autoprefixer({
             browsers: ['last 2 version'],
-            cascade: false
+            cascade: false,
         }))
         .pipe(concat('style.min.css'))
         .pipe(gulp.dest('css'))
         .pipe(browserSync.reload({
-            stream: true
+            stream: true,
         }));
 });
 
 gulp.task('minify-js', function (cb) {
     pump([
-            gulp.src('js/main.js'),
-            uglify(),
-            concat('main.min.js'),
-            gulp.dest('js'),
-        ],
-        cb
-    );
+        gulp.src('js/main.js'),
+        uglify(),
+        concat('main.min.js'),
+        gulp.dest('js'),
+    ], cb);
 });
 
 gulp.task('cache-bust', function () {
@@ -76,20 +65,14 @@ gulp.task('cache-bust', function () {
 });
 
 gulp.task('images', function () {
-   gulp.src(['img/*', '!img/dist/*'])
-       .pipe(imagemin([
-           imagemin.gifsicle({
-               interlaced: true,
-               optimizationLevel: 3,
-           }),
-           imagemin.jpegtran({progressive: true}),
-           imagemin.optipng({optimizationLevel: 7}),
-           imagemin.svgo({plugins: [{removeViewBox: true}]})
-       ]))
-       .pipe(gulp.dest('img/dist'));
+    gulp.src(['img/*', '!img/dist/*'])
+        .pipe(imagemin([
+            imagemin.jpegtran({ progressive: true }),
+        ]))
+        .pipe(gulp.dest('img/dist'));
 });
 
-gulp.task('sw', function(callback) {
+gulp.task('sw', function (callback) {
     var rootDir = './';
 
     swPrecache.write(`${rootDir}/service-worker.js`, {
@@ -104,3 +87,15 @@ gulp.task('sw', function(callback) {
         minify: true
     }, callback);
 });
+
+gulp.task('default', gulp.series(
+    'browser-sync',
+    'minify-css',
+    'minify-js',
+    function () {
+        gulp.watch('scss/**/*.scss', ['sass']);
+        gulp.watch('css/**/*.css', ['minify-css', 'cache-bust']);
+        gulp.watch('js/**/*.js', ['minify-js', 'cache-bust', browserSync.reload]);
+        gulp.watch('**/*.html', browserSync.reload);
+    },
+));

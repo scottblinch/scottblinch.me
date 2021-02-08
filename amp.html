@@ -202,74 +202,83 @@
         <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
     </head>
     <body>
-        <div class="container" itemscope itemtype="https://schema.org/Person">
+        <div class="container">
             <header id="header">
-                <h1 itemprop="name">Scott Blinch</h1>
-                <a class="profile-picture-link" href="https://scottblinch.me/" itemprop="url" title="Website link"
-                   target="_blank" rel="noopener">
+                <h1>Scott Blinch</h1>
+                <a class="profile-picture-link" href="https://scottblinch.me/" title="Website link">
                     <amp-img class="profile-picture" src="img/scott-blinch.jpg" alt="Photo of Scott Blinch" width="400"
-                             height="400" itemprop="image" layout="responsive"></amp-img>
+                             height="400" layout="responsive"></amp-img>
                 </a>
             </header>
             <main id="main">
-                <div id="about-me" class="description" itemprop="description">
+                <div id="about-me" class="description">
                     <h2>About me</h2>
-                    <p>
-                        I'm a front end web developer based in
-                        <span itemprop="workLocation" itemscope itemtype="https://schema.org/Place"><span itemprop="name">London, Ontario, Canada</span></span>.
-                        I mainly code in HTML, CSS, and JS (in addition to PHP, SQL, etc) to create fast, efficient,
-                        accessible, and, most importantly, spiffy websites and web apps.
+                    p>
+                        I'm a front end web developer based in Toronto, Ontario, Canada. I code in
+                        all the languages one would expect from a front end web developer (fine,
+                        I'll list them: HTML, CSS, JS) and prefer to sit on the
+                        <a href="https://bradfrost.com/blog/post/frontend-design-react-and-a-bridge-over-the-great-divide/">front of the front end</a>.
+                        Building out super usable (by the user), reusable (by the developer), and
+                        accessible (to everyone) components on top of well thought out design
+                        systems is my jam.
                     </p>
                     <p>
-                        I am currently a <span itemprop="jobTitle">front end web developer</span> at
-                        <span itemscope itemprop="worksFor" itemtype="https://schema.org/Organization"><a href="https://raceroster.com/" itemprop="url"><span itemprop="name">Race Roster</span></a>, <span itemprop="description">a registration platform for endurance events in North America</span> based in <span itemprop="location" itemscope itemtype="https://schema.org/Place"><span itemprop="name">London, Ontario, Canada</span></span></span>.
-                        Before that I spent just under 3 years as the lead front end web developer at
-                        <a href="http://www.tbkcreative.com/">tbk Creative</a>,
-                        an award-winning digital marketing agency based in London, Ontario, Canada. Learn more about all
-                        the super neat-o things I did in my <a href="resume.html">resume</a>.
+                        I am currently a frontend developer at
+                        <a href="https://raceroster.com/">Race Roster</a>,
+                        a registration platform for endurance events worldwide based in London,
+                        Ontario, Canada. Before that I spent just under 3 years as the lead front
+                        end web developer at
+                        <a href="http://www.tbkcreative.com/">tbk Creative</a>.
+                        Learn more about all the super neat-o things I did in my
+                        <a href="resume.html">resume</a>.
                     </p>
                     <p>
-                        I also play guitar in
-                        <span itemscope itemprop="memberOf" itemtype="https://schema.org/Organization"><a href="https://betyourlife.ca/" itemprop="url"><span itemprop="name">Bet Your Life</span></a>, a punk rock band also based in<span itemprop="location" itemscope itemtype="https://schema.org/Place"><span itemprop="name">London, Ontario, Canada</span></span></span>.
+                        Before the pandemic, I spent a couple years co-organizing the
+                        <a href="https://www.meetup.com/en-AU/London-Front-end-Development-Meetup/">London Front-end Development Meetup</a>
+                        where I also delivered a
+                        <a href="http://slides.com/scottblinch">whole pile of presentations</a>,
+                        especially about web accessibility. I also spent time teaching and
+                        volunteering with
+                        <a href="https://www.canadalearningcode.ca/">Canada Learning Code</a>.
+                        Both of these are things I plan to pick back up on when things are a
+                        little more safe.
                     </p>
                 </div>
                 <section id="contact-me">
                     <h2>Contact me</h2>
                     <ul class="contact-list">
                         <li>
-                            <a href="mailto:scott@scottblinch.me" title="Email me" itemprop="email">
-                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            <a href="mailto:scott@scottblinch.me" title="Email me">
+                                <span class="fa fa-envelope" aria-hidden="true"></span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://twitter.com/scottblinch" title="Follow me on Twitter" target="_blank"
-                               rel="noopener">
-                                <i class="fa fa-twitter" aria-hidden="true"></i>
+                            <a href="https://twitter.com/scottblinch" title="Follow me on Twitter">
+                                <span class="fa fa-twitter" aria-hidden="true"></span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://ca.linkedin.com/in/scottblinch" title="Connect with me on LinkedIn"
-                               target="_blank" rel="noopener">
-                                <i class="fa fa-linkedin" aria-hidden="true"></i>
+                            <a href="https://ca.linkedin.com/in/scottblinch" title="Connect with me on LinkedIn">
+                                <span class="fa fa-linkedin" aria-hidden="true"></span>
                             </a>
                         </li>
                         <li>
-                            <a href="https://github.com/scottblinch" title="View my GitHub profile" target="_blank"
-                               rel="noopener">
-                                <i class="fa fa-github" aria-hidden="true"></i>
+                            <a href="https://github.com/scottblinch" title="View my GitHub profile">
+                                <span class="fa fa-github" aria-hidden="true"></span>
                             </a>
                         </li>
                         <li>
-                        <a href="http://stackoverflow.com/story/scottblinch" title="View my Stack Overflow profile">
-                            <i class="fa fa-stack-overflow" aria-hidden="true"></i>
-                        </a>
+                            <a href="http://stackoverflow.com/story/scottblinch" title="View my Stack Overflow profile">
+                                <span class="fa fa-stack-overflow" aria-hidden="true"></span>
+                            </a>
                         </li>
                     </ul>
                 </section>
             </main>
             <footer class="footer" id="footer">
                 <a class="probably-insufferable-star-wars-reference" href="https://www.youtube.com/watch?v=NnP5iDKwuwk">
-                    <i class="fa fa-rebel" aria-hidden="true"></i> Stay on target.
+                    <i class="fa fa-rebel" aria-hidden="true"></i>
+                    Stay on target.
                 </a>
             </footer>
         </div>
