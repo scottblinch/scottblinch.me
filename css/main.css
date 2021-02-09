@@ -135,8 +135,6 @@ summary::-webkit-details-marker {
   .resume p {
     margin-bottom: 1em;
     line-height: 1.4; }
-  .resume a::after {
-    display: none; }
 
 .resume-body {
   text-align: left; }
@@ -171,6 +169,8 @@ summary::-webkit-details-marker {
 
 .resume-contact {
   list-style: none; }
+  .resume-contact a::after {
+    display: none; }
 
 .resume-contact-phone {
   display: none; }
