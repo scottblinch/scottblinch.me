@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["404.html","a867451042bcd462507ea7e4ee02e7c1"],["amp.html","6a82d8d2d412b2415cc4faa43cb285b1"],["css/font-awesome.min.css","269550530cc127b6aa5a35925a7de6ce"],["css/main.css","e039eb80e8cc7c25053c7bc1a7d0eb61"],["css/normalize.min.css","30583ed3d845d23cc6ffa4cdc63a0ca0"],["css/style.min.css","d9e835e046af8ed7daffa9f9eb0e6cd9"],["fonts/FontAwesome.otf","0d2717cd5d853e5c765ca032dfd41a4d"],["fonts/fontawesome-webfont.eot","674f50d287a8c48dc19ba404d20fe713"],["fonts/fontawesome-webfont.svg","912ec66d7572ff821749319396470bde"],["fonts/fontawesome-webfont.ttf","b06871f281fee6b241d60582ae9369b9"],["fonts/fontawesome-webfont.woff","fee66e712a8a08eef5805a46892932ad"],["fonts/fontawesome-webfont.woff2","af7ae505a9eed503f8b8e6982036873e"],["img/scott-blinch.jpg","7933fa33df1700865279de4d3d50fb67"],["index.html","1109e614c889c84289a57e34db92191a"],["js/main.js","19eac037dfa13cb93ceaf469e8dfeb02"],["js/main.min.js","15aae925df8d768ff20a9bb00db7c376"],["resume.html","a5256c3c8f5e8ba9300d2148138e44e2"],["service-worker.html","c11eb9411779bcddc74d829a3b53617e"]];
+var precacheConfig = [["404.html","2eaf5eb901a975e02c4fdc32046b7572"],["amp.html","c35773e9fc656c7d6fb0453203f62ac7"],["css/font-awesome.min.css","269550530cc127b6aa5a35925a7de6ce"],["css/main.css","4102154dfc9ee3f63f79c85137e2bd3f"],["css/normalize.min.css","30583ed3d845d23cc6ffa4cdc63a0ca0"],["css/style.min.css","7afbe4f0c358e600ae78dee30028421e"],["fonts/FontAwesome.otf","0d2717cd5d853e5c765ca032dfd41a4d"],["fonts/fontawesome-webfont.eot","674f50d287a8c48dc19ba404d20fe713"],["fonts/fontawesome-webfont.svg","912ec66d7572ff821749319396470bde"],["fonts/fontawesome-webfont.ttf","b06871f281fee6b241d60582ae9369b9"],["fonts/fontawesome-webfont.woff","fee66e712a8a08eef5805a46892932ad"],["fonts/fontawesome-webfont.woff2","af7ae505a9eed503f8b8e6982036873e"],["img/scott-blinch.jpg","7933fa33df1700865279de4d3d50fb67"],["index.html","39e33b6fdf28ab10c89f380714a95cbf"],["js/main.js","19eac037dfa13cb93ceaf469e8dfeb02"],["js/main.min.js","15aae925df8d768ff20a9bb00db7c376"],["resume.html","ba5149aa201f108d75cf0ade0f5b326f"],["service-worker.html","b18a2adb094d5768b22ae4e1bf87b128"]];
 var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
 
 
@@ -45,7 +45,7 @@ var ignoreUrlParametersMatching = [/^utm_/];
 
 
 
-var addDirectoryIndex = function (originalUrl, index) {
+var addDirectoryIndex = function(originalUrl, index) {
     var url = new URL(originalUrl);
     if (url.pathname.slice(-1) === '/') {
       url.pathname += index;
@@ -53,7 +53,7 @@ var addDirectoryIndex = function (originalUrl, index) {
     return url.toString();
   };
 
-var cleanResponse = function (originalResponse) {
+var cleanResponse = function(originalResponse) {
     // If this is not a redirected response, then we don't have to do anything.
     if (!originalResponse.redirected) {
       return Promise.resolve(originalResponse);
@@ -75,7 +75,7 @@ var cleanResponse = function (originalResponse) {
     });
   };
 
-var createCacheKey = function (originalUrl, paramName, paramValue,
+var createCacheKey = function(originalUrl, paramName, paramValue,
                            dontCacheBustUrlsMatching) {
     // Create a new URL object to avoid modifying originalUrl.
     var url = new URL(originalUrl);
@@ -91,7 +91,7 @@ var createCacheKey = function (originalUrl, paramName, paramValue,
     return url.toString();
   };
 
-var isPathWhitelisted = function (whitelist, absoluteUrlString) {
+var isPathWhitelisted = function(whitelist, absoluteUrlString) {
     // If the whitelist is empty, then consider all URLs to be whitelisted.
     if (whitelist.length === 0) {
       return true;
@@ -104,7 +104,7 @@ var isPathWhitelisted = function (whitelist, absoluteUrlString) {
     });
   };
 
-var stripIgnoredUrlParameters = function (originalUrl,
+var stripIgnoredUrlParameters = function(originalUrl,
     ignoreUrlParametersMatching) {
     var url = new URL(originalUrl);
     // Remove the hash; see https://github.com/GoogleChrome/sw-precache/issues/290
