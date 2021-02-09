@@ -96,17 +96,16 @@ gulp.task('build', gulp.series(
 
 gulp.task('watch', gulp.series(
     'build',
-    function () {
+    function (done) {
         gulp.watch('scss/**/*.scss', gulp.series('sass'));
         gulp.watch('css/**/*.css', gulp.series('minify-css', 'cache-bust'));
         gulp.watch('js/**/*.js', gulp.series('minify-js', 'cache-bust', function () {
             browserSync.reload();
         }));
-        gulp.watch('**/*.html', function () {
-            browserSync.reload();
-        });
+        gulp.watch('**/*.html').on('change', browserSync.reload);
+        done();
     },
+    'browser-sync',
 ));
-
 
 gulp.task('default', gulp.series('build'));
