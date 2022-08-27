@@ -223,15 +223,6 @@ summary::-webkit-details-marker {
   display: none;
 }
 
-.resume-contact-phone {
-  display: none;
-}
-@media print {
-  .resume-contact-phone {
-    display: block;
-  }
-}
-
 .resume-section {
   padding-left: 4em;
 }
