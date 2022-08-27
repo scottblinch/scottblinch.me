@@ -1,34 +1,44 @@
 html {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
-  font-size: calc(18px + (24 - 18) * (100vw - 320px) / (1200 - 320));
+  font-size: calc(18px + 6 * (100vw - 320px) / 880);
   color: #212121;
-  box-sizing: border-box; }
-  @media (min-width: 1200px) {
-    html {
-      font-size: 24px; } }
+  box-sizing: border-box;
+}
+@media (min-width: 1200px) {
+  html {
+    font-size: 24px;
+  }
+}
 
 *,
 ::before,
 ::after {
-  box-sizing: inherit; }
+  box-sizing: inherit;
+}
 
 body {
   padding: 2em 0 1em;
   text-align: center;
-  background-color: #fafafa; }
+  background-color: #fafafa;
+}
 
 a {
-  color: #0d47a1; }
-  a:hover, a:focus {
-    color: #b71c1c;
-    text-decoration: none; }
-  @media print {
-    a:not([href^="https://scottblinch.me"])::after {
-      content: " (" attr(href) ")"; } }
+  color: #0d47a1;
+}
+a:hover, a:focus {
+  color: #b71c1c;
+  text-decoration: none;
+}
+@media print {
+  a:not([href^="https://scottblinch.me"])::after {
+    content: " (" attr(href) ")";
+  }
+}
 
 img {
   max-width: 100%;
-  height: auto; }
+  height: auto;
+}
 
 h1,
 h2,
@@ -38,45 +48,57 @@ h5,
 h6 {
   margin-top: 3em;
   line-height: 1;
-  text-align: center; }
+  text-align: center;
+}
 
 h1 {
   margin-top: 0;
-  font-size: 2.074em; }
+  font-size: 2.074em;
+}
 
 h2 {
-  font-size: 1.728em; }
+  font-size: 1.728em;
+}
 
 h3 {
-  font-size: 1.44em; }
+  font-size: 1.44em;
+}
 
 h4 {
-  font-size: 1.2em; }
+  font-size: 1.2em;
+}
 
 h5 {
-  font-size: 1em; }
+  font-size: 1em;
+}
 
 h6 {
-  font-size: .833em; }
+  font-size: 0.833em;
+}
 
 p {
   margin-bottom: 2em;
   line-height: 1.5;
-  max-width: 66ch; }
+  max-width: 66ch;
+}
 
 .container {
   max-width: 39em;
   margin: 0 auto;
-  padding: 0 1em; }
+  padding: 0 1em;
+}
 
 .profile-picture-link {
-  display: inline-block; }
+  display: inline-block;
+}
 
 .profile-picture {
-  border-radius: 50%; }
+  border-radius: 50%;
+}
 
 .description {
-  text-align: left; }
+  text-align: left;
+}
 
 .contact-list {
   padding: 0;
@@ -85,144 +107,180 @@ p {
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: center; }
-  .contact-list li {
-    display: inline-block;
-    padding: 0 .25em;
-    line-height: 0;
-    vertical-align: middle; }
-  .contact-list a {
-    display: inline-block;
-    padding: .25em;
-    line-height: 0;
-    text-decoration: none; }
-  .contact-list i {
-    display: inline-block; }
+  justify-content: center;
+}
+.contact-list li {
+  display: inline-block;
+  padding: 0 0.25em;
+  line-height: 0;
+  vertical-align: middle;
+}
+.contact-list a {
+  display: inline-block;
+  padding: 0.25em;
+  line-height: 0;
+  text-decoration: none;
+}
+.contact-list i {
+  display: inline-block;
+}
 
 .footer {
-  margin-top: 3em; }
-  @media print {
-    .footer {
-      display: none; } }
+  margin-top: 3em;
+}
+@media print {
+  .footer {
+    display: none;
+  }
+}
 
 .probably-insufferable-star-wars-reference {
   font-size: 14px;
   color: #424242;
-  text-decoration: none; }
-  .probably-insufferable-star-wars-reference:hover, .probably-insufferable-star-wars-reference:focus {
-    color: #212121; }
-  .probably-insufferable-star-wars-reference i {
-    display: inline-block;
-    margin-right: .25em; }
+  text-decoration: none;
+}
+.probably-insufferable-star-wars-reference:hover, .probably-insufferable-star-wars-reference:focus {
+  color: #212121;
+}
+.probably-insufferable-star-wars-reference i {
+  display: inline-block;
+  margin-right: 0.25em;
+}
 
 summary::-webkit-details-marker {
-  display: none; }
+  display: none;
+}
 
 .resume {
-  font-size: 14px; }
-  @media (min-width: 992px) {
-    .resume {
-      font-size: 16px; } }
-  .resume h2,
-  .resume h3,
-  .resume h4,
-  .resume h5,
-  .resume h6 {
-    margin-top: 1em;
-    text-align: left; }
-  .resume h2 {
-    font-size: 1.5em; }
-  .resume p {
-    margin-bottom: 1em;
-    line-height: 1.4; }
+  font-size: 14px;
+}
+@media (min-width: 992px) {
+  .resume {
+    font-size: 16px;
+  }
+}
+.resume h2,
+.resume h3,
+.resume h4,
+.resume h5,
+.resume h6 {
+  margin-top: 1em;
+  text-align: left;
+}
+.resume h2 {
+  font-size: 1.5em;
+}
+.resume p {
+  margin-bottom: 1em;
+  line-height: 1.4;
+}
 
 .resume-body {
-  text-align: left; }
-  @media screen and (min-width: 992px) {
-    .resume-body {
-      background-color: #eee; } }
+  text-align: left;
+}
+@media screen and (min-width: 992px) {
+  .resume-body {
+    background-color: #eee;
+  }
+}
 
 .resume-page {
   position: relative;
-  padding: 2em; }
-  @media screen and (min-width: 992px) {
-    .resume-page {
-      margin: 2em auto;
-      background: #fff;
-      box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
-      width: 21.59cm;
-      max-width: 100%;
-      min-height: 29.94cm;
-      padding: 2cm; } }
-  @media print {
-    .resume-page {
-      padding: 0; } }
+  padding: 2em;
+}
+@media screen and (min-width: 992px) {
+  .resume-page {
+    margin: 2em auto;
+    background: #fff;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    width: 21.59cm;
+    max-width: 100%;
+    min-height: 29.94cm;
+    padding: 2cm;
+  }
+}
+@media print {
+  .resume-page {
+    padding: 0;
+  }
+}
 
 .resume-header {
-  text-align: right; }
+  text-align: right;
+}
 
 .resume-name {
   margin-top: 0;
   border-bottom: 2px solid #ddd;
-  padding-bottom: .5em;
-  margin-bottom: .5em; }
+  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+}
 
 .resume-contact {
-  list-style: none; }
-  .resume-contact a::after {
-    display: none; }
-
-.resume-contact-phone {
-  display: none; }
-  @media print {
-    .resume-contact-phone {
-      display: block; } }
+  list-style: none;
+}
+.resume-contact a::after {
+  display: none;
+}
 
 .resume-section {
-  padding-left: 4em; }
-  @media (min-width: 768px), print {
-    .resume-section {
-      padding-left: 8em; } }
-  .resume-section:last-of-type {
-    margin-bottom: 0; }
+  padding-left: 4em;
+}
+@media (min-width: 768px), print {
+  .resume-section {
+    padding-left: 8em;
+  }
+}
+.resume-section:last-of-type {
+  margin-bottom: 0;
+}
+.resume-section time {
+  position: relative;
+  top: 0.25em;
+  float: left;
+  display: inline-block;
+  width: 3.5rem;
+  margin-left: -4rem;
+  font-size: 0.7em;
+  text-align: right;
+}
+@media (min-width: 768px), print {
   .resume-section time {
-    position: relative;
-    top: .25em;
-    float: left;
-    display: inline-block;
-    width: 3.5rem;
-    margin-left: -4rem;
-    font-size: .7em;
-    text-align: right; }
-    @media (min-width: 768px), print {
-      .resume-section time {
-        width: 7rem;
-        margin-left: -8rem; } }
+    width: 7rem;
+    margin-left: -8rem;
+  }
+}
 
 .resume-section-heading {
-  position: relative; }
+  position: relative;
+}
+.resume-section-heading::before {
+  position: absolute;
+  top: 50%;
+  right: calc(100% + 1rem);
+  display: inline-block;
+  width: 3.5rem;
+  border-top: 5px solid #b71c1c;
+  margin-top: -0.25rem;
+  content: "";
+}
+@media (min-width: 768px), print {
   .resume-section-heading::before {
-    position: absolute;
-    top: 50%;
-    right: calc(100% + 1rem);
-    display: inline-block;
-    width: 3.5rem;
-    border-top: 5px solid #b71c1c;
-    margin-top: -.25rem;
-    content: ''; }
-    @media (min-width: 768px), print {
-      .resume-section-heading::before {
-        width: 7rem; } }
+    width: 7rem;
+  }
+}
 
 @media print {
   summary a,
-  summary .print-bold {
+summary .print-bold {
     color: inherit;
     font-weight: 600;
-    text-decoration: none; } }
+    text-decoration: none;
+  }
+}
 
 .skills ul {
   padding-left: 1.5em;
-  margin-bottom: 0; }
-
+  margin-bottom: 0;
+}
 /*# sourceMappingURL=../maps/main.css.map */

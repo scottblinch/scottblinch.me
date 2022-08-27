@@ -1,6 +1,6 @@
 const gulp = require('gulp');
 const sourcemaps = require('gulp-sourcemaps');
-const sass = require('gulp-sass');
+const sass = require('gulp-sass')(require('sass'));
 const concat = require('gulp-concat');
 const cleanCSS = require('gulp-clean-css');
 const autoprefixer = require('gulp-autoprefixer');
@@ -8,7 +8,6 @@ const uglify = require('gulp-uglify');
 const pump = require('pump');
 const browserSync = require('browser-sync').create();
 const cacheBust = require('gulp-cache-bust');
-const imagemin = require('gulp-imagemin');
 const path = require('path');
 const swPrecache = require('sw-precache');
 
@@ -63,12 +62,6 @@ gulp.task('cache-bust', function () {
         .pipe(gulp.dest('.'));
 });
 
-gulp.task('images', function () {
-    return gulp.src(['img/*', '!img/dist/*'])
-        .pipe(imagemin())
-        .pipe(gulp.dest('img/dist'));
-});
-
 gulp.task('sw', function (callback) {
     var rootDir = './';
 
@@ -89,7 +82,6 @@ gulp.task('build', gulp.series(
     'sass',
     'minify-css',
     'minify-js',
-    'images',
     'cache-bust',
     'sw',
 ));
