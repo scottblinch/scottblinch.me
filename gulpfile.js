@@ -8,7 +8,6 @@ const uglify = require('gulp-uglify');
 const pump = require('pump');
 const browserSync = require('browser-sync').create();
 const cacheBust = require('gulp-cache-bust');
-const path = require('path');
 const swPrecache = require('sw-precache');
 
 gulp.task('browser-sync', function () {

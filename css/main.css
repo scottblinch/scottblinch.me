@@ -272,14 +272,14 @@ summary::-webkit-details-marker {
 
 @media print {
   summary a,
-summary .print-bold {
+  summary .print-bold {
     color: inherit;
     font-weight: 600;
     text-decoration: none;
   }
 }
 
-.skills ul {
+.resume-section ul {
   padding-left: 1.5em;
   margin-bottom: 0;
 }
